@@ -42,6 +42,3 @@ class employeeViewSet(viewsets.ViewSet):
         emp = get_object_or_404(queryset, pk=pk)
         emp.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
-emp_list = employeeViewSet.as_view({'get': 'list'})
-emp_detail = employeeViewSet.as_view({'get': 'retrieve'})
